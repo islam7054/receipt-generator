@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TempCover</title>
+
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="shortcut icon" href="./assets/Content/Images/Icons/tempcover-favicon.ico">
+    <link href="./assets/content/frontend-light.css" rel="stylesheet">
+    <link href="./assets/content/mobiscroll.custom-4.0.0.min.css" rel="stylesheet">
+    <style>
+        .a-formatted-link {
+            text-decoration: none;
+        }
+        /* Remove default marker from anchor tags */
+        .navbar-nav li{
+            list-style-type: none !important;
+        }
+
+        .field-validation-error {
+            color: red; /* Error message color */
+            font-size: 12px; /* Adjust size as needed */
+        }
+
+        .input-validation-error {
+            border-color: red; /* Border color for invalid input fields */
+            background-color: #fdd; /* Light red background for invalid input fields */
+        }
+
+        .form-control-wrap {
+            position: relative;
+        }
+
+        .field-validation-error {
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+<body role="document" class="" style="padding-right: 0px;">
+    <div id="TopOfPage"></div>
+    <div class="ancillary-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-22 col-md-offset-1 col-sm-23 col-sm-offset-1">
+
+                    <div class="ancillary-navigation-wrap">
+                        <!-- Ancillary Navigation -->
+                        <nav id="ancillary-navigation" role="navigation" class="ancillary-navigation">
+
+                            <div class="pull-right">
+                                <a class="btn btn-link nav-link a-formatted-link" href="./DatabaseHandler.php?action=userLogout">Logout</a>
+                                <span class="separator"> |</span>
+                                <a href="/frequently-asked-questions" class="btn btn-link" target="_blank">FAQ's</a>
+                            </div>
+                        </nav>
+
+                        <!-- Social Navigation -->
+                        <nav id="CoreSiteNavigation">
+
+                        </nav>
+
+                        <nav id="social-navigation" class="social-navigation">
+                            <a href="https://twitter.com/tempcover" class="twitter" title="Visit tempcover's Twitter feed" target="_blank">Twitter</a>
+                            <a href="https://www.facebook.com/tempcover" class="facebook" title="Visit tempcover's Facebook page" target="_blank">Facebook</a>
+                            <a href="https://www.youtube.com/user/tempcover" class="youtube" title="Visit tempcover's YouTube channel" target="_blank">YouTube</a>
+                            <a href="https://www.linkedin.com/company/temporary-cover-ltd?trk=tyah" class="linkedin" title="Visit tempcover's LinkedIn feed" target="_blank">Linkedin</a>
+                            <a href="https://plus.google.com/+tempcover/posts" class="google" title="Visit tempcover's Google + page" target="_blank">Google +</a>
+                        </nav>
+                    </div>
+                    <!-- /ancillary-navigation-wrap -->
+
+                </div>
+                <!-- /col-md-22 /col-md-offset-1 -->
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /ancillary-header -->
+    <header id="site-header" class="site-header" role="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-offset-1 col-sm-9 col-sm-offset-1 brand-logo-container">
+
+
+                    <a class="brand brand-logo " href="/?">Tempcover</a>
+
+
+                    <div class="branded-hybrid-association-message-container">
+                        <div id="branded-hybrid-association-message">
+                            <span id="association-container"><span class="hidden-sm hidden-xs">In
+                                    partnership&nbsp;</span>with </span><span><img src="./assets/content/images/Affiliates/103.png" alt="In partnership with"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /col-md-9 /col-md-offset-1 -->
+                <div class="col-md-13 col-sm-13 brand-message-container">
+                    <div class="brand-messages">
+                        <h1 class="article-title brand-message">
+                            Short term insurance
+                        </h1>
+                        <p class="brand-message-secondary">We are the UK's largest temporary and short term insurance
+                            provider.</p>
+
+
+                    </div>
+                    <!-- /brand-messages -->
+                </div>
+                <!-- /col-md-13 -->
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </header><main class="site-content" id="site-content">
+    <article class="article">
+        <div class="article-body">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                                                            <span style="color:red;float:right;">
+                                    <b>
+                                        You left 27 days of subscription                                    </b>
+                                </span>
+                                                </div>
+                    <div class="row">
+                        <div class="col-md-18 col-md-push-6">
+                            <h1 class="article-title" style="margin-bottom: 15px">Receipt Generator</h1>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <form id="PolicySecurityCheckFrm" action="./DatabaseHandler.php" method="POST" class="form-horizontal" novalidate="novalidate">
+                            <input name="action" type="hidden" value="receiptGenerator">
+                            <input name="__RequestVerificationToken" type="hidden" value="XaYH8lbiO_8Z4xkMLC30Tnyx3CGj3WE7musGGXvF7CWZD5Aeueu4pJ6U9Gi-0-w8JjGJEEnxMwscQW9EgNq2AbwkiGM1">
+
+                            <div class="col-md-16">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="first_name">First Name</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="First Name is not supplied" id="first_name" name="first_name" placeholder="First name" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="first_name" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="middle_name">Middle Name</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" id="middle_name" name="middle_name" placeholder="Middle name" type="text" value="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="last_name">Last Name</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Last Name is not supplied" id="last_name" name="last_name" placeholder="Last name" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="last_name" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="address_line_one">Address Line One</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Address is not supplied" id="address_line_one" name="address_line_one" placeholder="Address Line One" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="address_line_one" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="address_line_two">Address Line Two</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Address is not supplied" id="address_line_two" name="address_line_two" placeholder="Address Line Two" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="address_line_two" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="country">Country</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Country is not supplied" id="country" name="country" placeholder="Country" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="country" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="pincode">Post Code</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Pincode is not supplied" id="pincode" name="pincode" placeholder="Pincode" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="pincode" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="last_name">Registration Number</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Registration number is not supplied" id="order_number" name="order_number" placeholder="Registration number" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="order_number" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="PolicyStartDate">
+                                            Start date
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <div class="input-group">
+                                                <input class="form-control mobiscrolldate mbsc-comp" id="PolicyStartDate" data-val="true" data-val-required="Start date is not supplied" name="start_date" placeholder="Receipt start date" type="text" value="" readonly="">
+                                                <span class="input-group-btn">
+                                                    <button id="PolicyStartDateBtn" class="btn btn-default " type="button">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="PolicyStartDate" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="ReceiptStartTime">
+                                            Start Time
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <div class="input-group">
+                                                <input class="form-control mobiscrolldate mbsc-comp" id="ReceiptStartTime" data-val="true" data-val-required="Start time is not supplied" name="start_time" placeholder="Receipt start time" type="text" value="" readonly="">
+                                                <span class="input-group-btn">
+                                                    <button id="ReceiptStartTimeBtn" class="btn btn-default " type="button">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="ReceiptStartTime" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="PolicyEndDate">
+                                            End date
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <div class="input-group">
+                                                <input class="form-control mobiscrolldate mbsc-comp" id="PolicyEndDate" data-val="true" data-val-required="End date is not supplied" name="end_date" placeholder="Receipt end date" type="text" value="" readonly="">
+                                                <span class="input-group-btn">
+                                                    <button id="PolicyEndDateBtn" class="btn btn-default " type="button">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="PolicyEndDate" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="ReceiptEndTime">
+                                            End Time
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <div class="input-group">
+                                                <input class="form-control mobiscrolldate mbsc-comp" id="ReceiptEndTime" data-val="true" data-val-required="End time is not supplied" name="end_time" placeholder="Receipt end time" type="text" value="" readonly="">
+                                                <span class="input-group-btn">
+                                                    <button id="ReceiptEndTimeBtn" class="btn btn-default " type="button">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="ReceiptEndTime" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="PolicyProposerDateOfBirth">
+                                            Date of Birth
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <div class="input-group">
+                                                <input class="form-control mobiscrolldate mbsc-comp" id="PolicyProposerDateOfBirth" data-val="true" data-val-required="Date of birth is not supplied" name="date_of_birth" placeholder="Date of Birth" type="text" value="" readonly="">
+                                                <span class="input-group-btn">
+                                                    <button id="PolicyProposerDateOfBirthBtn" class="btn btn-default " type="button">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="PolicyProposerDateOfBirth" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="gender">Gender</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <select class="form-control" id="gender" name="gender" data-val="true" data-val-required="Gender is not supplied">
+                                                <option value="">Select Gender</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                            <span class="field-validation-valid" data-valmsg-for="gender" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="licence_type">Licence Type</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <select class="form-control" id="licence_type" name="licence_type" data-val="true" data-val-required="Licence Type is not supplied">
+                                                <option value="">Select Licence Type</option>
+                                                <option value="Full UK licence">Full UK licence</option>
+                                                <option value="Auto UK licence">Auto UK licence</option>
+                                            </select>
+                                            <span class="field-validation-valid" data-valmsg-for="licence_type" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="occupation">Occupation</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" id="occupation" name="occupation" placeholder="Occupation" type="text" value="" data-val="true" data-val-required="Occupation is not supplied">
+                                            <span class="field-validation-valid" data-valmsg-for="occupation" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="vehicle_value">Vehicle Value</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <select class="form-control" id="vehicle_value" name="vehicle_value" data-val="true" data-val-required="Vehicle value is not supplied">
+                                                <option value="">Select Vehicle Value</option>
+                                                <option value="1500-5000">£1,500 to £5,000</option>
+                                                <option value="5001-10000">£5,001 to £10,000</option>
+                                                <option value="10001-20000">£10,001 to £20,000</option>
+                                                <option value="20001-30000">£20,001 to £30,000</option>
+                                                <option value="30001-40000">£30,001 to £40,000</option>
+                                                <option value="40001-50000">£40,001 to £50,000</option>
+                                                <option value="50001-65000">£50,001 to £65,000</option>
+                                                <option value="65001-over">£65,001 and over</option>
+                                            </select>
+                                            <span class="field-validation-valid" data-valmsg-for="vehicle_value" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="total_amount">Invoice Price</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" id="total_amount" name="total_amount" placeholder="Invoice Price" type="text" value="" data-val="true" data-val-required="Total Amount is not supplied" pattern="^\d+(\.\d{1,2})?$" oninput="this.value = this.value.replace(/[^0-9.]/g, '');">
+                                            <small class="form-text text-muted" style="color: red;">Note: Enter amount without any pound symbol, this is the amount thatll be shown on email</small>
+                                            <span class="field-validation-valid" data-valmsg-for="total_amount" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="reason_for_issue">Reason for Issue</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <select class="form-control" id="reason_for_issue" name="reason_for_issue" data-val="true" data-val-required="Please select your reason for cover">
+                                                <option value="">Please select your reason for cover</option>
+                                                <option value="test_driving_or_buying_a_vehicle">Test driving or buying a vehicle</option>
+                                                <option value="selling_a_vehicle">Selling a vehicle</option>
+                                                <option value="my_vehicle_is_not_annually_insured">My vehicle isn't annually insured</option>
+                                                <option value="my_vehicle_is_undergoing_repair_or_service">My vehicle is undergoing repair or service</option>
+                                                <option value="driving_a_friend_or_relatives_vehicle">Driving a friend or relative's vehicle</option>
+                                                <option value="temporary_business_need">Temporary business need</option>
+                                                <option value="other">Other (please tell us more)</option>
+                                            </select>
+                                            <span class="field-validation-valid" data-valmsg-for="reason_for_issue" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="mobile">Telephone Number</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Telephone number is not supplied" id="mobile" name="mobile" placeholder="Telephone number" type="text" value="">
+                                            <small class="form-text text-muted" style="color: red;">Note: Number must start with 07 like 07XXXXXXXXX</small>
+                                            <span class="field-validation-valid" data-valmsg-for="mobile" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="email">Email</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Email is not supplied" id="email" name="email" placeholder="Email" type="email" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="product_model">Policy Number</label>
+                                        <div class="form-control-wrap col-md-8">
+                                            <input class="form-control" data-val="true" data-val-required="Policy Number is not supplied" id="product_model" name="product_model" placeholder="Policy Number" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="product_model" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-control-wrap col-md-4">
+                                            <button type="button" class="btn btn-warning" onclick="generateRandomNumber()">Generate</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="make">Make</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Make is not supplied" id="make" name="make" placeholder="Make" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="make" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="model">Model</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Model is not supplied" id="model" name="model" placeholder="Model" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="model" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10">
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input type="submit" id="SubmitForm" value="submit" class="quote-submit btn btn-call-to-action" title="View Documents">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input data-val="true" data-val-required="'ValidatePage' must not be empty." id="ValidatePage" name="ValidatePage" type="hidden" value="False">
+                            </div>
+                        </form>
+                    </div><!-- /row -->
+                </div>
+            </div>
+        </div>
+
+    </article>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+<script src="./assets/content/js/unobtrusive-validation-override.js"></script>
+<script src="./assets/content/js/mobiscroll.custom-4.0.0.min.js"></script>
+<script src="./assets/content/js/mobiScroller.js"></script>
+<script src="./assets/content/js/PolicySecurityHelper.js"></script>
+<script type="text/javascript" language="javascript">
+    $(function () {
+        var policySecurityHelper = new Tc.PolicySecurityHelperConstructor();
+        policySecurityHelper.BindDateControlsChanged();
+        policySecurityHelper.formfocus();
+    });
+
+    $(document).ready(function() {
+        $.validator.unobtrusive.parse(document);
+
+        $('#PolicySecurityCheckFrm').on('submit', function(event) {
+            if (!$(this).valid()) {
+                event.preventDefault();
+                $(this).find(':input').trigger('blur');
+            }
+        });
+    });
+
+
+    function generateRandomNumber() {
+        var $input = $('#product_model');
+
+        var randomNumber = Math.floor(Math.random() * 90000000) + 10000000;
+        var policyNumber = "TCV-MOT-" + randomNumber;
+        $input.val(policyNumber);
+        $input.trigger('blur');
+    }
+</script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+        <script>                    Swal.fire({
+                        title: "Login Successfully!",
+                        icon: 'success',
+                        showConfirmButton: true,
+                        confirmButtonText: 'Ok'
+                    });
+        </script>
+    <script type="text/javascript">
+        rg4js('apiKey', '');
+        rg4js('enablePulse', true);
+    </script>
+    
+</body></html>
+
+<body role="document" class="" style="padding-right: 0px;">
+    <div id="TopOfPage"></div>
+    <div class="ancillary-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-22 col-md-offset-1 col-sm-23 col-sm-offset-1">
+
+                    <div class="ancillary-navigation-wrap">
+                        <!-- Ancillary Navigation -->
+                        <nav id="ancillary-navigation" role="navigation" class="ancillary-navigation">
+
+                            <div class="pull-right">
+                                <a class="btn btn-link nav-link a-formatted-link" href="./DatabaseHandler.php?action=userLogout">Logout</a>
+                                <span class="separator"> |</span>
+                                <a href="/frequently-asked-questions" class="btn btn-link" target="_blank">FAQ's</a>
+                            </div>
+                        </nav>
+
+                        <!-- Social Navigation -->
+                        <nav id="CoreSiteNavigation">
+
+                        </nav>
+
+                        <nav id="social-navigation" class="social-navigation">
+                            <a href="https://twitter.com/tempcover" class="twitter" title="Visit tempcover's Twitter feed" target="_blank">Twitter</a>
+                            <a href="https://www.facebook.com/tempcover" class="facebook" title="Visit tempcover's Facebook page" target="_blank">Facebook</a>
+                            <a href="https://www.youtube.com/user/tempcover" class="youtube" title="Visit tempcover's YouTube channel" target="_blank">YouTube</a>
+                            <a href="https://www.linkedin.com/company/temporary-cover-ltd?trk=tyah" class="linkedin" title="Visit tempcover's LinkedIn feed" target="_blank">Linkedin</a>
+                            <a href="https://plus.google.com/+tempcover/posts" class="google" title="Visit tempcover's Google + page" target="_blank">Google +</a>
+                        </nav>
+                    </div>
+                    <!-- /ancillary-navigation-wrap -->
+
+                </div>
+                <!-- /col-md-22 /col-md-offset-1 -->
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /ancillary-header -->
+    <header id="site-header" class="site-header" role="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-offset-1 col-sm-9 col-sm-offset-1 brand-logo-container">
+
+
+                    <a class="brand brand-logo " href="/?">Tempcover</a>
+
+
+                    <div class="branded-hybrid-association-message-container">
+                        <div id="branded-hybrid-association-message">
+                            <span id="association-container"><span class="hidden-sm hidden-xs">In
+                                    partnership&nbsp;</span>with </span><span><img src="./assets/content/images/Affiliates/103.png" alt="In partnership with"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /col-md-9 /col-md-offset-1 -->
+                <div class="col-md-13 col-sm-13 brand-message-container">
+                    <div class="brand-messages">
+                        <h1 class="article-title brand-message">
+                            Short term insurance
+                        </h1>
+                        <p class="brand-message-secondary">We are the UK's largest temporary and short term insurance
+                            provider.</p>
+
+
+                    </div>
+                    <!-- /brand-messages -->
+                </div>
+                <!-- /col-md-13 -->
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </header><main class="site-content" id="site-content">
+    <article class="article">
+        <div class="article-body">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                                                            <span style="color:red;float:right;">
+                                    <b>
+                                        You left 27 days of subscription                                    </b>
+                                </span>
+                                                </div>
+                    <div class="row">
+                        <div class="col-md-18 col-md-push-6">
+                            <h1 class="article-title" style="margin-bottom: 15px">Receipt Generator</h1>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <form id="PolicySecurityCheckFrm" action="./DatabaseHandler.php" method="POST" class="form-horizontal" novalidate="novalidate">
+                            <input name="action" type="hidden" value="receiptGenerator">
+                            <input name="__RequestVerificationToken" type="hidden" value="XaYH8lbiO_8Z4xkMLC30Tnyx3CGj3WE7musGGXvF7CWZD5Aeueu4pJ6U9Gi-0-w8JjGJEEnxMwscQW9EgNq2AbwkiGM1">
+
+                            <div class="col-md-16">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="first_name">First Name</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="First Name is not supplied" id="first_name" name="first_name" placeholder="First name" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="first_name" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="middle_name">Middle Name</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" id="middle_name" name="middle_name" placeholder="Middle name" type="text" value="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="last_name">Last Name</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Last Name is not supplied" id="last_name" name="last_name" placeholder="Last name" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="last_name" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="address_line_one">Address Line One</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Address is not supplied" id="address_line_one" name="address_line_one" placeholder="Address Line One" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="address_line_one" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="address_line_two">Address Line Two</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Address is not supplied" id="address_line_two" name="address_line_two" placeholder="Address Line Two" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="address_line_two" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="country">Country</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Country is not supplied" id="country" name="country" placeholder="Country" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="country" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="pincode">Post Code</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Pincode is not supplied" id="pincode" name="pincode" placeholder="Pincode" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="pincode" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="last_name">Registration Number</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Registration number is not supplied" id="order_number" name="order_number" placeholder="Registration number" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="order_number" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="PolicyStartDate">
+                                            Start date
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <div class="input-group">
+                                                <input class="form-control mobiscrolldate mbsc-comp" id="PolicyStartDate" data-val="true" data-val-required="Start date is not supplied" name="start_date" placeholder="Receipt start date" type="text" value="" readonly="">
+                                                <span class="input-group-btn">
+                                                    <button id="PolicyStartDateBtn" class="btn btn-default " type="button">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="PolicyStartDate" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="ReceiptStartTime">
+                                            Start Time
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <div class="input-group">
+                                                <input class="form-control mobiscrolldate mbsc-comp" id="ReceiptStartTime" data-val="true" data-val-required="Start time is not supplied" name="start_time" placeholder="Receipt start time" type="text" value="" readonly="">
+                                                <span class="input-group-btn">
+                                                    <button id="ReceiptStartTimeBtn" class="btn btn-default " type="button">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="ReceiptStartTime" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="PolicyEndDate">
+                                            End date
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <div class="input-group">
+                                                <input class="form-control mobiscrolldate mbsc-comp" id="PolicyEndDate" data-val="true" data-val-required="End date is not supplied" name="end_date" placeholder="Receipt end date" type="text" value="" readonly="">
+                                                <span class="input-group-btn">
+                                                    <button id="PolicyEndDateBtn" class="btn btn-default " type="button">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="PolicyEndDate" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="ReceiptEndTime">
+                                            End Time
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <div class="input-group">
+                                                <input class="form-control mobiscrolldate mbsc-comp" id="ReceiptEndTime" data-val="true" data-val-required="End time is not supplied" name="end_time" placeholder="Receipt end time" type="text" value="" readonly="">
+                                                <span class="input-group-btn">
+                                                    <button id="ReceiptEndTimeBtn" class="btn btn-default " type="button">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="ReceiptEndTime" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="PolicyProposerDateOfBirth">
+                                            Date of Birth
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <div class="input-group">
+                                                <input class="form-control mobiscrolldate mbsc-comp" id="PolicyProposerDateOfBirth" data-val="true" data-val-required="Date of birth is not supplied" name="date_of_birth" placeholder="Date of Birth" type="text" value="" readonly="">
+                                                <span class="input-group-btn">
+                                                    <button id="PolicyProposerDateOfBirthBtn" class="btn btn-default " type="button">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="PolicyProposerDateOfBirth" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="gender">Gender</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <select class="form-control" id="gender" name="gender" data-val="true" data-val-required="Gender is not supplied">
+                                                <option value="">Select Gender</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                            <span class="field-validation-valid" data-valmsg-for="gender" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="licence_type">Licence Type</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <select class="form-control" id="licence_type" name="licence_type" data-val="true" data-val-required="Licence Type is not supplied">
+                                                <option value="">Select Licence Type</option>
+                                                <option value="Full UK licence">Full UK licence</option>
+                                                <option value="Auto UK licence">Auto UK licence</option>
+                                            </select>
+                                            <span class="field-validation-valid" data-valmsg-for="licence_type" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="occupation">Occupation</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" id="occupation" name="occupation" placeholder="Occupation" type="text" value="" data-val="true" data-val-required="Occupation is not supplied">
+                                            <span class="field-validation-valid" data-valmsg-for="occupation" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="vehicle_value">Vehicle Value</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <select class="form-control" id="vehicle_value" name="vehicle_value" data-val="true" data-val-required="Vehicle value is not supplied">
+                                                <option value="">Select Vehicle Value</option>
+                                                <option value="1500-5000">£1,500 to £5,000</option>
+                                                <option value="5001-10000">£5,001 to £10,000</option>
+                                                <option value="10001-20000">£10,001 to £20,000</option>
+                                                <option value="20001-30000">£20,001 to £30,000</option>
+                                                <option value="30001-40000">£30,001 to £40,000</option>
+                                                <option value="40001-50000">£40,001 to £50,000</option>
+                                                <option value="50001-65000">£50,001 to £65,000</option>
+                                                <option value="65001-over">£65,001 and over</option>
+                                            </select>
+                                            <span class="field-validation-valid" data-valmsg-for="vehicle_value" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="total_amount">Invoice Price</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" id="total_amount" name="total_amount" placeholder="Invoice Price" type="text" value="" data-val="true" data-val-required="Total Amount is not supplied" pattern="^\d+(\.\d{1,2})?$" oninput="this.value = this.value.replace(/[^0-9.]/g, '');">
+                                            <small class="form-text text-muted" style="color: red;">Note: Enter amount without any pound symbol, this is the amount thatll be shown on email</small>
+                                            <span class="field-validation-valid" data-valmsg-for="total_amount" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="reason_for_issue">Reason for Issue</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <select class="form-control" id="reason_for_issue" name="reason_for_issue" data-val="true" data-val-required="Please select your reason for cover">
+                                                <option value="">Please select your reason for cover</option>
+                                                <option value="test_driving_or_buying_a_vehicle">Test driving or buying a vehicle</option>
+                                                <option value="selling_a_vehicle">Selling a vehicle</option>
+                                                <option value="my_vehicle_is_not_annually_insured">My vehicle isn't annually insured</option>
+                                                <option value="my_vehicle_is_undergoing_repair_or_service">My vehicle is undergoing repair or service</option>
+                                                <option value="driving_a_friend_or_relatives_vehicle">Driving a friend or relative's vehicle</option>
+                                                <option value="temporary_business_need">Temporary business need</option>
+                                                <option value="other">Other (please tell us more)</option>
+                                            </select>
+                                            <span class="field-validation-valid" data-valmsg-for="reason_for_issue" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="mobile">Telephone Number</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Telephone number is not supplied" id="mobile" name="mobile" placeholder="Telephone number" type="text" value="">
+                                            <small class="form-text text-muted" style="color: red;">Note: Number must start with 07 like 07XXXXXXXXX</small>
+                                            <span class="field-validation-valid" data-valmsg-for="mobile" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="email">Email</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Email is not supplied" id="email" name="email" placeholder="Email" type="email" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="product_model">Policy Number</label>
+                                        <div class="form-control-wrap col-md-8">
+                                            <input class="form-control" data-val="true" data-val-required="Policy Number is not supplied" id="product_model" name="product_model" placeholder="Policy Number" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="product_model" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-control-wrap col-md-4">
+                                            <button type="button" class="btn btn-warning" onclick="generateRandomNumber()">Generate</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="make">Make</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Make is not supplied" id="make" name="make" placeholder="Make" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="make" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10" for="model">Model</label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input class="form-control" data-val="true" data-val-required="Model is not supplied" id="model" name="model" placeholder="Model" type="text" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="model" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="control-label col-md-10">
+                                        </label>
+                                        <div class="form-control-wrap col-md-12">
+                                            <input type="submit" id="SubmitForm" value="submit" class="quote-submit btn btn-call-to-action" title="View Documents">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input data-val="true" data-val-required="'ValidatePage' must not be empty." id="ValidatePage" name="ValidatePage" type="hidden" value="False">
+                            </div>
+                        </form>
+                    </div><!-- /row -->
+                </div>
+            </div>
+        </div>
+
+    </article>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+<script src="./assets/content/js/unobtrusive-validation-override.js"></script>
+<script src="./assets/content/js/mobiscroll.custom-4.0.0.min.js"></script>
+<script src="./assets/content/js/mobiScroller.js"></script>
+<script src="./assets/content/js/PolicySecurityHelper.js"></script>
+<script type="text/javascript" language="javascript">
+    $(function () {
+        var policySecurityHelper = new Tc.PolicySecurityHelperConstructor();
+        policySecurityHelper.BindDateControlsChanged();
+        policySecurityHelper.formfocus();
+    });
+
+    $(document).ready(function() {
+        $.validator.unobtrusive.parse(document);
+
+        $('#PolicySecurityCheckFrm').on('submit', function(event) {
+            if (!$(this).valid()) {
+                event.preventDefault();
+                $(this).find(':input').trigger('blur');
+            }
+        });
+    });
+
+
+    function generateRandomNumber() {
+        var $input = $('#product_model');
+
+        var randomNumber = Math.floor(Math.random() * 90000000) + 10000000;
+        var policyNumber = "TCV-MOT-" + randomNumber;
+        $input.val(policyNumber);
+        $input.trigger('blur');
+    }
+</script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+        <script>                    Swal.fire({
+                        title: "Login Successfully!",
+                        icon: 'success',
+                        showConfirmButton: true,
+                        confirmButtonText: 'Ok'
+                    });
+        </script>
+    <script type="text/javascript">
+        rg4js('apiKey', '');
+        rg4js('enablePulse', true);
+    </script>
+    
+</body>
+
